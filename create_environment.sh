@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p "Your name please:" name
 
-dir=submission_reminder_app_$name
+dir=submission_reminder_$name
 mkdir -p ./$dir
 mkdir -p ./$dir/app ./$dir/modules ./$dir/assets ./$dir/config
 
