@@ -36,8 +36,14 @@ function check_submissions {
         # Check if assignment matches and status is 'not submitted'
         if [[ "$assignment" == "$ASSIGNMENT" && "$status" == "not submitted" ]]; then
             echo "Reminder: $student has not submitted the $ASSIGNMENT assignment!"
+            found_missing=1
         fi
    done < <(tail -n +2 "$submissions_file") # Skip the header
+
+   # If no missing submissions found
+   if [[ "$found_missing" -eq 0 ]]; then
+        echo "Mission complete: All students have uploaded their $ASSIGNMENT. Great job!"
+   fi
 }
 EOF
 
