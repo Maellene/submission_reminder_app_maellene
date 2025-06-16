@@ -1,1 +1,3 @@
-# submission_reminder_app_maellene
+This is how the program will run
+
+Firstly, we will create the create_environment.sh script and make it executable. This will prompt you to enter your name and automatically generate the working directory with all the required folders and files, including config, modules and submissions. Once the environment is created, you can use the copilot_shell_script.sh to update the assignment name stored in the config file. This script will then trigger the reminder system by running startup.sh, which checks the list of students and identifies those who have not submitted the current assignment. All reminders or confirmation messages will be printed directly in the terminal. Make sure all .sh scripts are executable by running chmod +x *.sh if needed. 
